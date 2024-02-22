@@ -1,7 +1,7 @@
 import React from 'react';
 import { NewsProvider } from '../context/NewsContext';
-import ArticleList from '../components/features/ArticleList';
-import Layout from '../components/layout/Layout';
+import ArticleList from './features/ArticleList';
+import Layout from './layout/Layout';
 
 const Home = () => (
   <NewsProvider>
