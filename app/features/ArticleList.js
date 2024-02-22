@@ -1,12 +1,14 @@
-import React, { useContext } from 'react';
+'use client';
+import React from 'react';
 import Article from './Article';
-import { NewsContext } from '../context/NewsContext';
+import { useNews } from '../context/NewsContext'; 
+import styles from '../styles/ArticleList.module.css';
 
 const ArticleList = () => {
-  const { articles } = useContext(NewsContext);
+  const { articles } = useNews(); // This uses the custom hook for context
 
   return (
-    <div>
+    <div className={styles.grid}>
       {articles.map((article) => (
         <Article key={article.id} {...article} />
       ))}

@@ -1,25 +1,19 @@
 import React from 'react';
-// import Image from 'next/image';
-import styles from '../styles/Article.module.css';
+import Image from 'next/image';
+import styles from '../styles/Article.module.css'; // Ensure this path is correct
 
-const Article = ({ title, excerpt, imageUrl }) => (
-  <article className={styles.article}>
+const Article = ({ title, summary, imageUrl }) => (
+  <div className={styles.card}>
     {imageUrl && (
       <div className={styles.imageWrapper}>
-        <Image
-          src={imageUrl}
-          alt={`Image for ${title}`}
-          width={500}
-          height={300}
-          layout='responsive'
-          objectFit='cover'
-          loading='lazy'
-        />
+        <Image src={imageUrl} alt={title} width={150} height={150} layout="responsive" />
       </div>
     )}
-    <h2 className={styles.title}>{title}</h2>
-    <p className={styles.excerpt}>{excerpt}</p>
-  </article>
+    <div className={styles.content}>
+      <h2 className={styles.title}>{title}</h2>
+      <p className={styles.summary}>{summary}</p>
+    </div>
+  </div>
 );
 
 export default Article;
