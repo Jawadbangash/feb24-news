@@ -11,7 +11,11 @@ export const NewsProvider = ({ children }) => {
   const [articles, setArticles] = React.useState([
     // Synthetic data
     { id: 1, title: 'Article Title 1', summary: 'Summary of the first article.', imageUrl: 'https://via.placeholder.com/150' },
-    { id: 2, title: 'Article Title 2', summary: 'Summary of the second article.', imageUrl: 'https://via.placeholder.com/150' },
+    { id: 2, title: 'Article Title 2', summary: 'Summary of the second article.', imageUrl: 'https://via.placeholder.com/150' },    
+    { id: 3, title: 'Article Title 2', summary: 'Summary of the second article.', imageUrl: 'https://via.placeholder.com/150' },    
+    { id: 4, title: 'Article Title 2', summary: 'Summary of the second article.', imageUrl: 'https://via.placeholder.com/150' },
+    { id: 5, title: 'Article Title 2', summary: 'Summary of the second article.', imageUrl: 'https://via.placeholder.com/150' },
+    { id: 6, title: 'Article Title 2', summary: 'Summary of the second article.', imageUrl: 'https://via.placeholder.com/150' },
     // Add more articles as needed
   ]);
 
